@@ -17,5 +17,7 @@ const sumAll = function(thing, ...nums) {
     return total;
 };
 
+sumAll([1,2,3,3,2],3,1);
+
 // Do not edit below this line
 module.exports = sumAll;
