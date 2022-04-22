@@ -9,11 +9,8 @@ const subtract = function(x,y) {
 };
 
 const sum = function(...numbers) {
-  if (numbers = true) {
-  let numArray = numbers;
-  return numArray.reduce((x,y) => {return x + y});
-  }
-  else return 0;
+  let numArray = Array.from(...numbers).reduce((x,y) => {return x + y});
+  return numArray;
 };
 
 const multiply = function(x,y) {
