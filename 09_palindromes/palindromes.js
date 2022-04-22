@@ -9,16 +9,8 @@ const palindromes = function (theThing) {
         opThing.push(thing.pop());
     }
     thing = Array.from(theThing);
-    for (i = 0; i < end; i ++)
-        for (j = end; j >= 0; j++)
-        if (opThing[i] === thing[j]) {
-            return true;
-        }
-        else return false;
+    result = opThing.every((element) => {return thing.indexOf(element) !== -1})
+    return result;
 };
-
-
-palindromes("racecar");
-
 // Do not edit below this line
 module.exports = palindromes;
