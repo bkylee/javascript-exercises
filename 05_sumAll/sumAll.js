@@ -1,23 +1,29 @@
-const sumAll = function(thing, ...nums) {
+const sumAll = function(x,y) {
     //create a function to make a new array that has the common elements between the array enetered in the parameter and the arguments passed
-    let newArray = (thing,nums) => 
-    {for (i= 0; i<thing.length; i++) {
-        for (j=0; i<nums.length; i++) {
-            if (thing[i] === nums[j]){
-                newArray.push(thing[i]);
-            }
-        }
+    if (typeof(x) != "number" || typeof(y) != "number") {
+        return "ERROR";
     }
-    return newArray; 
+        else if (x < 0 || y < 0) {
+            return "ERROR";
+        }
+    if (y > x) {
+    let sum = x; 
+    for (i = x + 1; i <= y; i++){
+        sum = sum + i;
+    }
+    return sum; 
 }
-    newArray(thing, nums); 
-    total = Array.from(newArray);
-    total = total.map(Number);
-    total = total.reduce((previousValue, currentValue) => {return previousValue + currentValue});
-    return total;
+    else if (x > y) {
+            let sum = y; 
+            for (i = y + 1; i <= x; i++){
+                sum = sum + i;
+            }
+            return sum; 
+        
+    }
 };
 
-sumAll([1,2,3,3,2],3,1);
-
+sumAll(1,4);
 // Do not edit below this line
 module.exports = sumAll;
+
