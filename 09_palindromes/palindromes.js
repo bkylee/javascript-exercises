@@ -1,6 +1,5 @@
 const palindromes = function (theThing) {
-    //var for opposite of theThing
-    oppThing ="";
+    opThing == [];
     //array for original argument 
     thing = Array.from(theThing);
     //length of original argument 
@@ -12,7 +11,7 @@ const palindromes = function (theThing) {
     thing = Array.from(theThing);
     for (i = 0; i <= end; i ++)
         for (j = end; j >= 0; j++)
-        if (oppThing[i] === thing[j]) {
+        if (opThing[i] === thing[j]) {
             return true;
         }
         else return false;
