@@ -9,13 +9,16 @@ const subtract = function(x,y) {
 };
 
 const sum = function(...numbers) {
-  let numArray = Array.from(...numbers).reduce((x,y) => {return x + y});
-  return numArray;
-};
+  let total = 0;
+  if (numbers.length < 1) {
+    return total = 0;
+  }
+  else return total = Array.from(...numbers).reduce((x,y) => {return x + y});
+  };
 
-const multiply = function(x,y) {
-  total = x*y;
-  return total;
+const multiply = function(...numbers) {
+  total = 0;
+  return total = Array.from(...numbers).reduce((x,y) => {return x * y});
 };
 
 const power = function(x,y) {
@@ -24,11 +27,12 @@ const power = function(x,y) {
 };
 
 const factorial = function(x) {
-	if (x = 0) {
-    return 1;
+  total = 0;
+	if (x === 0) {
+    return total = 1;
   }
     else {
-      return (x * factorial-1);
+      return total = (x * factorial(x-1));
   }
 };
 
