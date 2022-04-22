@@ -1,6 +1,6 @@
 const ftoc = function(fahrenheit) {
-  let celcius = (fahrenheit - 32) * (5/9)
-  celcius = Math.round(celcius * 1)
+  let celcius = (fahrenheit - 32) * (5/9);
+  celcius = Math.round(celcius * 10) /10;
   return celcius;
 };
 
