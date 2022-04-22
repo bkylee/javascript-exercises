@@ -10,10 +10,10 @@ const subtract = function(x,y) {
 
 const sum = function(...numbers) {
   let total = 0;
-  if (numbers.length < 1) {
-    return total = 0;
+  if (numbers.length === 0) {
+    return total;
   }
-  else return total = Array.from(...numbers).reduce((x,y) => {return x + y});
+  else {return total = Array.from(...numbers).reduce((x,y) => {return x + y}, 0);}
   };
 
 const multiply = function(...numbers) {
