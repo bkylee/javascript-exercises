@@ -3,7 +3,7 @@ const palindromes = function (theString) {
     //modify theString to remove punctuation, force lowercase, and to make an array. 
     //unModThing = theString.toString().toLowerCase().split('').filter((letter) => {return punctation.indexOf(letter) === -1;});
     unModThing = theString.replace(/[^\w\s]|_/g, "").replace(/\s{2,}/g," ");
-    unModThing = unModThing.toLowerCase();
+    unModThing = unModThing.toLowerCase().replace(/\s/g, '');
     thing = Array.from(unModThing);
 
     //length of original argument 
